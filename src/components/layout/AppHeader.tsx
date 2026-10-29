@@ -9,7 +9,7 @@ export const AppHeader = ({ children }: { children?: ReactNode }) => (
       <span className="brand-mark">
         <Layers size={16} />
       </span>
-      Form Builder
+      <span className="brand-name">Form Builder</span>
     </Link>
     <div className="app-header-actions">{children}</div>
   </header>

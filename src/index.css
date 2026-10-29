@@ -206,6 +206,8 @@ textarea {
 
 .brand {
   display: inline-flex;
+  flex-shrink: 0;
+  white-space: nowrap;
   align-items: center;
   gap: 10px;
   color: var(--text);
@@ -1681,6 +1683,20 @@ fieldset.setting legend {
 }
 
 @media (max-width: 640px) {
+  /* Logo only; the name stays readable to screen readers. */
+  .brand-name {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+
+  .app-header-actions .btn {
+    padding: 0 8px;
+  }
+
   .app-header {
     padding: 0 16px;
   }
