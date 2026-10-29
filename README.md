@@ -24,7 +24,7 @@ Other scripts:
 | `npm run check`                       | Type-check, lint and check formatting  |
 | `npm run lint:fix` / `npm run format` | Fix lint issues / format with Prettier |
 
-The app uses normal URLs (`/templates/:id/fill`), so the server has to return `index.html` for unknown paths. Vite's dev and preview servers already do; a deployed copy needs the same fallback on its host.
+The app uses normal URLs (`/templates/:id/fill`), so the server has to return `index.html` for unknown paths. Vite's dev and preview servers already do, and `vercel.json` sets the same rewrite for Vercel. Other hosts need an equivalent fallback.
 
 ---
 
